@@ -33,7 +33,9 @@ app.use("/api/auth", authRoutes);
 app.use("/api/contacts", contactsRoutes);
 app.use("/api/messages", messagesRoutes);
 app.use("/api/channel", channelRoutes);
-
+app.get("/",(req,res)=>{
+  res.json({"hello":"world"})
+});
 const server = app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
